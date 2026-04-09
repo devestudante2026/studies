@@ -57,30 +57,23 @@ def tag_html(nome_tag, conteudo, **attrs):
         atributo_formatado = f'{atributo}="{valor}"'
         atributos.append(atributo_formatado)
 
-        string_atributos = " ".join(atributos)
+    string_atributos = " ".join(atributos)
 
-        if string_atributos:
-            string_atributos = " " + string_atributos
+    if string_atributos:
+        string_atributos = " " + string_atributos
             
     return f"<{nome_tag}{string_atributos}>{conteudo}</{nome_tag}>"    
 
-# def OKtag_html(nome_tag, conteudo, **attrs):
-#     atributos_lista = []
-    
-#     for chave, valor in attrs.items():
-#         # HTML usa o padrão chave="valor"
-#         # Usamos aspas simples por fora para poder usar aspas duplas dentro
-#         formatado = f'{chave}="{valor}"'
-#         atributos_lista.append(formatado)
-    
-#     # Juntamos a lista em uma string separada por espaços
-#     string_atributos = " ".join(atributos_lista)
-    
-#     # Se houver atributos, adicionamos um espaço antes deles para não grudar no nome da tag
-#     if string_atributos:
-#         string_atributos = " " + string_atributos
-
-#     return f"<{nome_tag}{string_atributos}>{conteudo}</{nome_tag}>"
-
     
 print(tag_html("p", "nada a declarar", classe="texto", id="p1"))
+
+
+#Exercício 7:
+def junta_palavras(separador, *args):
+    # lista_palavras = [palavra for palavra in args]
+    # palavras_separadas = separador.join(args)
+    return separador.join(args)
+    
+
+print(junta_palavras(" - ", "letra", "alfabeto", "tela", "teste"))
+
