@@ -39,7 +39,7 @@ def str_filter(*args):
             big_words.append(word)
     return big_words
 
-#a mesma função de cima, só que usando list copmrehension
+#a mesma função de cima, só que usando list comprehension
 def str_filter_aprimorated(*args):
     bigger_words = [big_word for big_word in args if len(big_word) > 5]
     return bigger_words
