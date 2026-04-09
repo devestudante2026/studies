@@ -24,10 +24,11 @@ def calc_notas(nome_aluno, *args):
             # "Média" : f"{media:.2f}" #maneira que eu havia feito antes;
             "media" : round(media, 2)     
             }  
-    return dados_aluno
+    # return dados_aluno #assim era como era retornado a função, mas achei melhor retornar a fstring abaixo para não ter que ficar formatando os prints
+    return f"Aluno(a): {dados_aluno['nome']}\nMédia: {dados_aluno['media']}\nStatus: {dados_aluno['aprovado']}\nNotas: {dados_aluno['notas']}"
 
-aluno = calc_notas("Jubiscreide", 9, 7, 6, 6.8)
-print(f"Aluno(a): {aluno['nome']}\nMédia: {aluno['media']}\nStatus: {aluno['aprovado']}\nNotas: {aluno['notas']}")
+# aluno = calc_notas("Jubiscreide", 9, 7, 6, 6.8)
+# print(f"Aluno(a): {aluno['nome']}\nMédia: {aluno['media']}\nStatus: {aluno['aprovado']}\nNotas: {aluno['notas']}")
 print(calc_notas("Eu", 10, 4, 7, 8))
 
 
