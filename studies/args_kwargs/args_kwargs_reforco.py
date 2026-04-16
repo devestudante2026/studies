@@ -49,4 +49,6 @@ def gerar_url_busca(base_url, **filtros):
     string_unificada_filtros = "&".join(lista_filtros)
     return f"{base_url}?{string_unificada_filtros}"
 
-print(gerar_url_busca("www.google.com", tributo="iptu", ano="2026"))
+print(gerar_url_busca("www.guaira.sp.gov.br", tributo="iptu", ano="2026"))
+
+
